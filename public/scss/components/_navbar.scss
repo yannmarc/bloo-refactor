@@ -1,0 +1,14 @@
+// Navbar section
+@import "../abstract/variable";
+
+nav {
+    width: $w-full;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+
+    .nav__container {
+        width: inherit;
+        padding-block: $py-5;
+        max-width: $max-w-xl;
+        margin: 0 auto;
+    }
+}

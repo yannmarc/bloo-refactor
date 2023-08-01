@@ -1,0 +1,57 @@
+@import '../base/';
+@import '../abstract/';
+
+input[type="checkbox"] {
+     /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: $white;
+    /* Not removed via appearance */
+    margin: 0;
+    font-family: inherit;
+    color: inherit;
+    position: relative;
+    width: 1.45em;
+    height: 1.45em;
+    border: 0.15em solid $gray-200;
+    border-radius: $rounded-sm;
+    transform: translateY(-0.075em);
+
+    &::before {
+        content: "";
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        top: 10%;
+        bottom: 0;
+        left: 5%;
+        border-radius: 3px;
+        right: 0;
+        transform: translateY(50px);
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em $blue-500;
+    }
+}
+
+input[type="checkbox"]:checked {
+    border: 0.15em solid $blue-500;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.checkmark {
+    margin-left: 0.7rem;
+    margin-top: -0.2rem;
+    font-size: $text-md !important;
+    font-weight: $font-medium !important;
+    color: $gray-300;
+}
+
+input[type="checkbox"]:checked ~ .checkmark {
+    color: $gray-500 !important;
+    font-weight: $font-semibold;
+}

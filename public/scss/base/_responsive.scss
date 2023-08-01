@@ -1,0 +1,32 @@
+@import '../abstract/';
+@import './typography';
+
+// Gestion container here
+
+@media (min-width: 764px) {
+    // Header here
+    header {
+        width: $w-full;
+    
+        div {
+            width: inherit;
+            height: 14.9375rem;
+            background-color: hsl(199, 100%, 37%);
+        }
+    }
+    // Gestion container here
+    section {
+
+        .gestion {
+            max-width: 646px;
+            margin: 0 auto;
+            transform: translateY(-145px) !important;
+
+            &__heading {
+                span {
+                    padding-right: 14rem !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+// Header section
+@import '../abstract/';
+
+
+header {
+    width: $w-full;
+
+    div {
+        width: inherit;
+        height: calc(10.9375rem);
+        background-color: hsl(199, 100%, 37%);
+    }
+}

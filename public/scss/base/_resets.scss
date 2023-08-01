@@ -1,0 +1,26 @@
+// File for the resets
+@import "./typography";
+@import '../abstract/';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-sans;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $blue-100;
+}
+
+@for $i from 1 through 7 {
+    h#{i} {
+        margin: 0;
+        padding: 0;
+        color: red;
+    }
+}
